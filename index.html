@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>TestTask</title>
+</head>
+<body>
+    <section class="main">
+        <header>
+            <div class="logo">
+                <div class="vector-logo"></div>
+                <span>FocusTracker</span>
+            </div>
+            <button class="settings">
+                <div class="vector-settings"></div>
+                <span>Settings</span>
+            </button>
+        </header>
+        <div id="wrapper" class="timer-handler">
+            <div class="option">
+                <button id="focus" class="focus-btn btn active">focus</button>
+                <button id="shortBreak" class="break-btn btn">short break</button>
+                <button id="longBreak" class="long-break-btn btn">long break</button>
+            </div>
+            <div class="timer">
+                <div id="minutes" class="timer-elements">25</div>
+                <div id="pots" class="timer-elements">:</div>
+                <div id="seconds" class="timer-elements">00</div>
+            </div>
+            <div class="controls option">
+                
+                <div class="switch-btn">
+                    <button id="switch" class="up-layer">Start</button>
+                    <div class="down-layer"></div>
+                </div>
+                <button id="skip" class="skip-btn"></button>
+            </div>
+        </div>
+        <div class="tasks-block">
+            <div class="header-tasks-block">
+                <span class="title-block">Tasks</span>
+                <button class="settings-task-btn"></button>
+                <div class="dropdown-settings">
+                    <button id="clearFinished" class="dropdown-btn">
+                        <div class="vector-rubbish"></div>
+                        <span>Clear finished task</span>
+                    </button>
+                    <button id="clearAll" class="dropdown-btn">
+                        <div class="vector-rubbish"></div>
+                        <span>Clear all tasks</span>
+                    </button>
+                </div>
+            </div>
+            <div class="tasks">
+                <div class="task-block">
+                    <div class="create-task">
+                        <input id="title" type="text" placeholder="What r u focusing on?">
+                        <div class="focuses">
+                            <span>Ur focuses</span>
+                            <div class="count">
+                                <input id="count-tasks" type="number" min="0" step="1" value="1">
+                                <div class="buttons">
+                                    <button id="up"></button>
+                                    <button id="down">
+                                        <div class="vector-down"></div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-task">
+                            <button id="close-task">Close</button>
+                            <button id="save">Save</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="add-tasks">
+                    <div class="header-add-tasks">
+                        <div class="vector-plus"></div>
+                        <span>ADD task</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-area">
+            <div class="modal-window">
+                <div class="header-modal-window">
+                    <h1>Settings</h1>
+                    <button class="close-modal">
+                        <div class="vector-close"></div>
+                    </button>
+                </div>
+                <div class="change-settings">
+                    <span class="title-part-settings">Timer</span>
+                    <div class="time-changer">
+                        <span class="subtitle-part-settings">Time</span>
+                        <form id="form" class="form" action="">
+                            <div class="change-element">
+                                <span>focus</span>
+                                <div class="inputs-block">
+                                    <input class="time" id="0" type="number" min="0" max="60" value="25">
+                                    <input class="time" id="1" type="number" min="0" max="60" value="0">
+                                </div>
+                            </div>
+                            <div class="change-element">
+                                <span>short break</span>
+                                <div class="inputs-block">
+                                    <input class="time" id="2" type="number" min="0" max="60" value="5">
+                                    <input class="time" id="3" type="number" min="0" max="60" value="0">
+                                </div>
+                            </div>
+                            <div class="change-element">
+                                <span>long break</span>
+                                <div class="inputs-block">
+                                    <input class="time" id="4" type="number" min="0" max="60" value="15">
+                                    <input class="time" id="5" type="number" min="0" max="60" value="0">
+                                </div>
+                            </div>
+                        </form>
+                        <button class="submit-btn" type="submit">Submit</button>
+                        <div class="auto-start-settings">
+                            <div class="auto-start-focus">
+                                <span>Auto Start Pomodoros</span>
+                                <label>
+                                    <input id="auto-start-focus" type="checkbox" name="checkboxName" class="checkbox" value="0"/>
+                                    <div class="switch"></div>
+                                </label>
+                            </div>
+                            <div class="auto-start-break">
+                                <span>Auto Start Breaks</span>
+                                <label>
+                                    <input id="auto-start-break" type="checkbox" name="checkboxName" class="checkbox" value="0"/>
+                                    <div class="switch"></div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="break-interval">
+                            <span>Long break interval</span>
+                            <input id="break-interval" class="interval-break" type="number" min="0" value="0">
+                        </div>
+                    </div>
+                </div>
+                <div class="change-settings">
+                    <span class="title-part-settings">Tasks</span>
+                    <div class="auto-start-settings">
+                        <div class="auto-switch">
+                            <span>Auto Switch Tasks</span>
+                            <label>
+                                <input id="auto-switch-task" type="checkbox" name="checkboxName" class="checkbox" value="0"/>
+                                <div class="switch"></div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay"></div>
+        </div>
+    </section>
+</body>
+<script src="main.js"></script>
+</html>

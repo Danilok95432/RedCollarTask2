@@ -1,0 +1,917 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 100%;
+    background-color: #ba4949;
+}
+
+.main{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+header{
+    width: 50%;
+    max-width: 650px;
+    margin: 40px auto 40px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 10px;
+    align-items: center;
+}
+
+.logo span{
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    padding: 4px 5px;
+}
+
+.vector-logo{
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --%3E%3Csvg width='40px' height='40px' viewBox='-8.86 0 89.724 89.724' xmlns:dc='http://purl.org/dc/elements/1.1/' xmlns:cc='http://creativecommons.org/ns%23' xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns%23' xmlns='http://www.w3.org/2000/svg'%3E%3Cmetadata%3E%3Crdf:RDF%3E%3Ccc:Work%3E%3Cdc:subject%3E Compute %3C/dc:subject%3E%3Cdc:identifier%3E scheduler %3C/dc:identifier%3E%3Cdc:title%3E Scheduler %3C/dc:title%3E%3Cdc:format%3E image/svg+xml %3C/dc:format%3E%3Cdc:publisher%3E Amido Limited %3C/dc:publisher%3E%3Cdc:creator%3E Richard Slater %3C/dc:creator%3E%3Cdc:type rdf:resource='http://purl.org/dc/dcmitype/StillImage'/%3E%3C/cc:Work%3E%3C/rdf:RDF%3E%3C/metadata%3E%3Cpath d='m 669.21497,716.16952 c -18.32306,-0.0396 -35.04274,16.45493 -37.8937,35.46662 -3.09197,20.61868 10.43085,40.68377 30.06442,45.48809 5.87434,1.43751 8.76879,1.33098 8.76879,1.33098 0,0 0.0783,5.81591 0.0783,7.43781 0.86072,-0.81612 11.58733,-11.35245 11.58733,-11.35245 0,0 -6.46042,-6.24307 -11.58733,-11.19586 0.0962,2.79591 0,7.43781 0,7.43781 0,0 -6.71639,-10e-5 -13.07489,-3.36659 -31.30179,-16.57263 -23.88032,-62.2109 12.37026,-68.27129 4.51798,-0.75531 16.68773,1.19321 20.591,2.50537 -2.36387,-1.62536 -9.1934,-5.45519 -20.90417,-5.48049 z m 4.93244,8.45562 c -15.87521,0 -28.73344,12.93652 -28.73344,28.81173 0,15.87522 12.85823,28.73345 28.73344,28.73345 15.87522,0 28.73345,-12.85823 28.73345,-28.73345 0,-15.87521 -12.85823,-28.81173 -28.73345,-28.81173 z m -0.15658,1.95732 c 1.57244,0 2.81854,1.24609 2.81854,2.81854 0,1.57244 -1.2461,2.89683 -2.81854,2.89683 -1.57245,0 -2.89684,-1.32439 -2.89684,-2.89683 0,-1.57245 1.32439,-2.81854 2.89684,-2.81854 z m 0.0783,9.47342 c 2.84597,0 5.08903,2.12328 5.08903,4.77586 l 0,10.41294 9.08196,8.29903 c 1.97794,1.81151 1.89824,4.93868 -0.15659,7.04635 -2.0549,2.10774 -5.30328,2.35953 -7.28122,0.54805 l -9.94318,-9.08196 c -0.0814,-0.0747 -0.16047,-0.15596 -0.23488,-0.23488 -1.06676,-0.87613 -1.72244,-2.16599 -1.72244,-3.60147 l 0,-13.38806 c 0,-2.65258 2.32137,-4.77586 5.16732,-4.77586 z m -24.66222,15.58026 c 1.57244,0 2.81854,1.32439 2.81854,2.89683 0,1.57245 -1.2461,2.81854 -2.81854,2.81854 -1.57244,0 -2.81854,-1.24609 -2.81854,-2.81854 0,-1.57244 1.2461,-2.89683 2.81854,-2.89683 z m 49.55932,0.0783 c 1.57244,0 2.81854,1.2461 2.81854,2.81854 0,1.57245 -1.2461,2.81854 -2.81854,2.81854 -1.57245,0 -2.81854,-1.24609 -2.81854,-2.81854 0,-1.57244 1.24609,-2.81854 2.81854,-2.81854 z m -24.50564,23.48783 c 1.57245,0 2.89684,1.32439 2.89684,2.89683 0,1.57245 -1.32439,2.81854 -2.89684,2.81854 -1.57244,0 -2.81854,-1.24609 -2.81854,-2.81854 0,-1.57244 1.2461,-2.89683 2.81854,-2.89683 z' fill='%23fff' transform='translate(-630.881 -716.169)'/%3E%3C/svg%3E");
+}
+
+.settings{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.15) 50%, #ffffff00 50%);
+    background-size: 200% 100%;
+    background-position: left;
+    transition: all .35s ease-out;
+    padding: 5px 12px;
+}
+
+.settings span{
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    padding: 4px 5px;
+    
+}
+
+.settings:hover{
+    background-position: right;
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+.vector-settings{
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8' standalone='no'%3F%3E%3C!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --%3E%3Csvg viewBox='0 0 600 600' version='1.1' id='svg9724' sodipodi:docname='settings.svg' inkscape:version='1.2.2 (1:1.2.2+202212051550+b0a8486541)' width='30' height='30' xmlns:inkscape='http://www.inkscape.org/namespaces/inkscape' xmlns:sodipodi='http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg'%3E%3Cdefs id='defs9728' /%3E%3Csodipodi:namedview id='namedview9726' pagecolor='%23ffffff' bordercolor='%23666666' borderopacity='1.0' inkscape:showpageshadow='2' inkscape:pageopacity='0.0' inkscape:pagecheckerboard='0' inkscape:deskcolor='%23d1d1d1' showgrid='true' inkscape:zoom='1.1896171' inkscape:cx='205.52832' inkscape:cy='369.44661' inkscape:window-width='1920' inkscape:window-height='1009' inkscape:window-x='0' inkscape:window-y='1080' inkscape:window-maximized='1' inkscape:current-layer='g10449' showguides='true'%3E%3Cinkscape:grid type='xygrid' id='grid9972' originx='0' originy='0' /%3E%3C/sodipodi:namedview%3E%3Cg id='g10449' transform='matrix(0.95173205,0,0,0.95115787,13.901174,12.168794)' style='stroke-width:1.05103'%3E%3Cpath id='path1129' style='color:%23000000;fill:%23fff;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none;paint-order:stroke fill markers' d='m -899.99998,-310.79461 c -20.43409,0 -40.0078,4.62259 -52.90398,19.2757 -12.89618,14.65312 -13.31011,30.27623 -14.05636,39.78187 -0.74624,9.50565 -1.36732,15.42265 -2.80675,19.0879 -1.43942,3.66526 -2.62672,6.46545 -11.63186,11.66458 -9.00514,5.19911 -12.02109,4.82429 -15.91499,4.23825 -3.89398,-0.58605 -9.32638,-3.00427 -17.93168,-7.11083 -8.6053,-4.10655 -22.3462,-11.56116 -41.4843,-7.71929 -19.138,3.84186 -32.9287,18.48118 -43.1458,36.17762 -10.2171,17.69644 -15.9985,36.95986 -9.7566,55.45483 6.2418,18.49497 19.5659,26.66798 27.4249,32.06708 7.859,5.39908 12.6704,8.893362 15.1249,11.972567 2.4545,3.079205 4.2876,5.506097 4.2876,15.904332 0,10.398237 -1.8331,12.825128 -4.2876,15.904333 -2.4545,3.079204 -7.2659,6.57348 -15.1249,11.972569 -7.859,5.39909 -21.1831,13.572101 -27.4249,32.067077 -6.2419,18.4949758 -0.4605,37.758386 9.7566,55.454828 10.2171,17.696443 24.0078,32.335764 43.1458,36.177623 19.1381,3.84186 32.879,-3.612739 41.4843,-7.719295 8.6053,-4.106556 14.0377,-6.52478 17.93168,-7.110826 3.8939,-0.586047 6.90985,-0.960867 15.91499,4.238251 9.00514,5.199118 10.19243,7.999328 11.63186,11.664579 1.43943,3.665252 2.06051,9.582259 2.80675,19.087903 0.74625,9.505639 1.16018,25.128749 14.05636,39.781869 12.89618,14.65311 32.46989,19.2757 52.90398,19.2757 20.43409,0 40.0078,-4.62259 52.90398,-19.2757 12.89617,-14.65312 13.31011,-30.27623 14.05635,-39.781869 0.74624,-9.505644 1.36733,-15.422651 2.80676,-19.087903 1.43942,-3.665251 2.62672,-6.465461 11.63186,-11.664579 9.00513,-5.199119 12.02108,-4.824297 15.91499,-4.238251 3.89392,0.586046 9.32639,3.004271 17.93164,7.110826 8.60525,4.106555 22.34625,11.561156 41.48432,7.719295 19.13806,-3.84186 32.92874,-18.481179 43.14579,-36.177623 10.21705,-17.696442 15.99856,-36.9598523 9.75668,-55.454828 -6.24189,-18.494976 -19.56594,-26.667988 -27.42495,-32.067077 -7.859,-5.399088 -12.67039,-8.893365 -15.12488,-11.972569 -2.45449,-3.079205 -4.28764,-5.506097 -4.28764,-15.904333 0,-10.398236 1.83315,-12.825127 4.28764,-15.904332 2.45449,-3.079205 7.26588,-6.573487 15.12488,-11.972567 7.85901,-5.3991 21.18307,-13.57211 27.42495,-32.06708 6.24188,-18.49497 0.46037,-37.75839 -9.75668,-55.45483 -10.21705,-17.69644 -24.00773,-32.33576 -43.14579,-36.17762 -19.13807,-3.84186 -32.87907,3.61274 -41.48432,7.71929 -8.60525,4.10656 -14.03772,6.52478 -17.93164,7.11083 -3.89391,0.58604 -6.90986,0.96086 -15.91499,-4.23825 -9.00514,-5.19913 -10.19243,-7.99932 -11.63186,-11.66458 -1.43943,-3.66525 -2.06052,-9.58225 -2.80676,-19.0879 -0.74624,-9.50564 -1.16018,-25.12875 -14.05635,-39.78187 -12.89618,-14.65311 -32.46989,-19.2757 -52.90398,-19.2757 z m 0.0181,130.78031 c 55.63168,0 100.16735,44.4506 100.16735,100.014299 0,55.563699 -44.53567,100.014302 -100.16735,100.014302 -55.63168,0 -100.16738,-44.450603 -100.16738,-100.014302 0,-55.563699 44.5357,-100.014299 100.16738,-100.014299 z' transform='matrix(1.3636076,0,0,1.3667651,1527.8554,411.9526)' sodipodi:nodetypes='ssssssssscssssscssssssssssssssssssssssssssssssssssssss' /%3E%3Cg id='path10026' inkscape:transform-center-x='-0.59233046' inkscape:transform-center-y='-20.347403' transform='matrix(1.3807551,0,0,1.2700888,273.60014,263.99768)' /%3E%3Cg id='g11314' transform='matrix(1.5092301,0,0,1.3955555,36.774048,-9.4503933)' style='stroke-width:50.6951' /%3E%3Cpath style='color:%23000000;fill:%23fff;stroke-width:1.05103;stroke-linejoin:round;-inkscape-stroke:none;paint-order:stroke fill markers' d='m 300.60937,218.51428 c -46.03938,0 -84.05805,38.06434 -84.05805,84.09712 0,46.03278 38.01867,84.09711 84.05805,84.09711 46.03938,0 84.05649,-38.06433 84.05649,-84.09711 0,-46.03278 -38.01711,-84.09712 -84.05649,-84.09712 z' id='path344' sodipodi:nodetypes='sssss' /%3E%3C/g%3E%3C/svg%3E");
+}
+
+.timer-handler{
+    margin: 50px auto 50px auto;
+    width: 600px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #c15c5c;
+    border-radius: 8px;
+}
+
+.timer{
+    margin: auto;
+    width: 500px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.timer-elements{
+    color: white;
+    font-weight: bold;
+    font-size: 120px;
+}
+
+
+
+#pots{
+    margin-bottom: 25px;
+}
+
+.option{
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.btn{
+    border: none;
+    font-size: 22px;
+    text-transform: uppercase;
+    background: none;
+    padding: 4px 12px;
+    border-radius: 5px;
+    color: white;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.15) 50%, #ffffff00 50%);
+    background-size: 200% 100%;
+    background-position: left;
+    transition: all .35s ease-out;
+    cursor: pointer;
+}
+
+.btn:hover{
+    padding: 2px 25px;
+    background-position: right;
+    scale: 1.2;
+    font-weight: 700;
+}
+
+.active{
+    font-weight: bold;
+    background: none rgba(0, 0, 0, 0.15);
+}
+
+.controls{
+    position: relative;
+   justify-content: center;
+   align-items: center;
+   gap: 30px;
+}
+
+.block-1{
+    width: 60px;
+    height: 60px;
+}
+
+.skip-btn{
+    pointer-events: none;
+    position: absolute;
+    right: 110px;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    border: none;
+    background: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --%3E%3Csvg width='60px' height='60px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 20L15.3333 12L4 4V20Z' fill='%23fff'/%3E%3Cpath d='M20 4H17.3333V20H20V4Z' fill='%23fff'/%3E%3C/svg%3E");
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.switch-btn{
+    width: 150px;
+    height: 70px;
+    background: none;
+    position: relative;
+}
+
+.up-layer{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    top: -10px;
+    left: 0;
+    z-index: 1;
+    border-radius: 10px 10px 5px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    padding: 4px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: black;
+    font-size: 24px;
+    text-transform: uppercase;
+    transition: all 0.5s ease-in-out;
+}
+
+.up-layer:active{
+    top: 0;
+}
+
+.started{
+    top: 0;
+}
+
+.down-layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ebebeb;
+    border-radius: 10px 10px 5px 5px;
+}
+
+.modal-area{
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-modal-window{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+}
+
+.close-modal{
+    margin-right: 30px;
+    border: none;
+    background: none;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.close-modal:hover{
+    scale: 1.2;
+}
+
+.vector-close{
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --%3E%3Csvg width='30px' height='30px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.19 2H7.81C4.17 2 2 4.17 2 7.81V16.18C2 19.83 4.17 22 7.81 22H16.18C19.82 22 21.99 19.83 21.99 16.19V7.81C22 4.17 19.83 2 16.19 2ZM15.36 14.3C15.65 14.59 15.65 15.07 15.36 15.36C15.21 15.51 15.02 15.58 14.83 15.58C14.64 15.58 14.45 15.51 14.3 15.36L12 13.06L9.7 15.36C9.55 15.51 9.36 15.58 9.17 15.58C8.98 15.58 8.79 15.51 8.64 15.36C8.35 15.07 8.35 14.59 8.64 14.3L10.94 12L8.64 9.7C8.35 9.41 8.35 8.93 8.64 8.64C8.93 8.35 9.41 8.35 9.7 8.64L12 10.94L14.3 8.64C14.59 8.35 15.07 8.35 15.36 8.64C15.65 8.93 15.65 9.41 15.36 9.7L13.06 12L15.36 14.3Z' fill='%23292D32'/%3E%3C/svg%3E");
+}
+
+
+
+.modal-window{
+    position: absolute;
+    top: 0;
+    width: 650px;
+    max-width: 650px;
+    margin-top: 50px;
+    border-radius: 10px;
+    height: 100%;
+    background: white;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-window h1{
+    display: block;
+    padding: 15px 0 15px 30px;
+    font-weight: bold;
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.6;
+}
+
+.change-settings{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.title-part-settings{
+    display: block;
+    margin: 28px 0 10px 30px;
+    font-size: 22px;
+    color: rgb(187, 187, 187);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.time-changer{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.subtitle-part-settings{
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    margin: auto;
+}
+
+.form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.change-element{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.change-element span{
+    display: block;
+    font-size: 18px;
+    color: rgb(187, 187, 187);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    text-align: center;
+}
+
+.change-element input{
+    width: 80px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 10px;
+    background-color: white;
+    -webkit-box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
+    -moz-box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
+    box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
+    border-color: white;
+}
+
+.inputs-block{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.submit-btn{
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    color: black;
+    border: none;
+    background: rgb(195, 251, 113);
+    cursor: pointer;
+    margin: auto;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.submit-btn:hover{
+    scale: 1.1;
+    background: greenyellow;
+}
+
+.vector-plus{
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8' standalone='no'%3F%3E%3C!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --%3E%3Csvg width='30px' height='30px' viewBox='0 -0.5 21 21' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3Eplus_circle %5B%231427%5D%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cdefs%3E%3C/defs%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Dribbble-Light-Preview' transform='translate(-179.000000, -600.000000)' fill='%23fff'%3E%3Cg id='icons' transform='translate(56.000000, 160.000000)'%3E%3Cpath d='M137.7,450 C137.7,450.552 137.2296,451 136.65,451 L134.55,451 L134.55,453 C134.55,453.552 134.0796,454 133.5,454 C132.9204,454 132.45,453.552 132.45,453 L132.45,451 L130.35,451 C129.7704,451 129.3,450.552 129.3,450 C129.3,449.448 129.7704,449 130.35,449 L132.45,449 L132.45,447 C132.45,446.448 132.9204,446 133.5,446 C134.0796,446 134.55,446.448 134.55,447 L134.55,449 L136.65,449 C137.2296,449 137.7,449.448 137.7,450 M133.5,458 C128.86845,458 125.1,454.411 125.1,450 C125.1,445.589 128.86845,442 133.5,442 C138.13155,442 141.9,445.589 141.9,450 C141.9,454.411 138.13155,458 133.5,458 M133.5,440 C127.70085,440 123,444.477 123,450 C123,455.523 127.70085,460 133.5,460 C139.29915,460 144,455.523 144,450 C144,444.477 139.29915,440 133.5,440' id='plus_circle-%5B%231427%5D'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.title-block{
+    font-weight: bold;
+    font-size: 22px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    color: white;
+}
+
+.tasks-block{
+    width: 600px;
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 0px auto 50px auto;
+}
+
+.settings-task-btn{
+    border: none;
+    background: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3C!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --%3E%3Csvg width='30px' height='30px' viewBox='-6 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3Enavigation / 13 - navigation, dots, more, vertical, option icon%3C/title%3E%3Cg id='Free-Icons' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg transform='translate(-1051.000000, -750.000000)' fill='%23fff' id='Group'%3E%3Cg transform='translate(1041.000000, 746.000000)' id='Shape'%3E%3Cpath d='M12,4 C10.8954305,4 10,4.8954305 10,6 C10,7.1045695 10.8954305,8 12,8 C13.1045695,8 14,7.1045695 14,6 C14,4.8954305 13.1045695,4 12,4 Z'%3E%3C/path%3E%3Cpath d='M12,10 C10.8954305,10 10,10.8954305 10,12 C10,13.1045695 10.8954305,14 12,14 C13.1045695,14 14,13.1045695 14,12 C14,10.8954305 13.1045695,10 12,10 Z'%3E%3C/path%3E%3Cpath d='M12,16 C10.8954305,16 10,16.8954305 10,18 C10,19.1045695 10.8954305,20 12,20 C13.1045695,20 14,19.1045695 14,18 C14,16.8954305 13.1045695,16 12,16 Z'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.settings-task-btn-black{
+    border: none;
+    background: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3C!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --%3E%3Csvg width='30px' height='30px' viewBox='-6 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3Enavigation / 13 - navigation, dots, more, vertical, option icon%3C/title%3E%3Cg id='Free-Icons' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg transform='translate(-1051.000000, -750.000000)' fill='%23000000' id='Group'%3E%3Cg transform='translate(1041.000000, 746.000000)' id='Shape'%3E%3Cpath d='M12,4 C10.8954305,4 10,4.8954305 10,6 C10,7.1045695 10.8954305,8 12,8 C13.1045695,8 14,7.1045695 14,6 C14,4.8954305 13.1045695,4 12,4 Z'%3E%3C/path%3E%3Cpath d='M12,10 C10.8954305,10 10,10.8954305 10,12 C10,13.1045695 10.8954305,14 12,14 C13.1045695,14 14,13.1045695 14,12 C14,10.8954305 13.1045695,10 12,10 Z'%3E%3C/path%3E%3Cpath d='M12,16 C10.8954305,16 10,16.8954305 10,18 C10,19.1045695 10.8954305,20 12,20 C13.1045695,20 14,19.1045695 14,18 C14,16.8954305 13.1045695,16 12,16 Z'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.header-tasks-block{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid white;
+    padding: 15px;
+    position: relative;
+}
+
+.dropdown-settings{
+    width: 250px;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 40px;
+    z-index: 1000;
+    background: white;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown-task-settings{
+    width: 250px;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 0px;
+    right: -255px;
+    z-index: 1000;
+    background: white;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+
+
+.dropdown-btn{
+    border: none;
+    background: white;
+    font-size: 20px;
+    padding: 12px;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-task-btn{
+    border: none;
+    background: white;
+    font-size: 20px;
+    padding: 12px;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vector-rubbish{
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.5s ease-in-out;
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --%3E%3Csvg fill='%23000000' width='30px' height='30px' viewBox='-6.7 0 122.88 122.88' version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' enable-background='new 0 0 109.484 122.88' xml:space='preserve'%3E%3Cg%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.347,9.633h38.297V3.76c0-2.068,1.689-3.76,3.76-3.76h21.144 c2.07,0,3.76,1.691,3.76,3.76v5.874h37.83c1.293,0,2.347,1.057,2.347,2.349v11.514H0V11.982C0,10.69,1.055,9.633,2.347,9.633 L2.347,9.633z M8.69,29.605h92.921c1.937,0,3.696,1.599,3.521,3.524l-7.864,86.229c-0.174,1.926-1.59,3.521-3.523,3.521h-77.3 c-1.934,0-3.352-1.592-3.524-3.521L5.166,33.129C4.994,31.197,6.751,29.605,8.69,29.605L8.69,29.605z M69.077,42.998h9.866v65.314 h-9.866V42.998L69.077,42.998z M30.072,42.998h9.867v65.314h-9.867V42.998L30.072,42.998z M49.572,42.998h9.869v65.314h-9.869 V42.998L49.572,42.998z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.dropdown-btn span{
+    border-bottom: 1px solid black;
+}
+
+.dropdown-btn:hover{
+    background: black;
+    color: white;
+}
+
+.dropdown-task-btn:hover{
+    background: black;
+    color: white;
+}
+
+.dropdown-btn:hover .vector-rubbish{
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --%3E%3Csvg fill='%23fff' width='30px' height='30px' viewBox='-6.7 0 122.88 122.88' version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' enable-background='new 0 0 109.484 122.88' xml:space='preserve'%3E%3Cg%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.347,9.633h38.297V3.76c0-2.068,1.689-3.76,3.76-3.76h21.144 c2.07,0,3.76,1.691,3.76,3.76v5.874h37.83c1.293,0,2.347,1.057,2.347,2.349v11.514H0V11.982C0,10.69,1.055,9.633,2.347,9.633 L2.347,9.633z M8.69,29.605h92.921c1.937,0,3.696,1.599,3.521,3.524l-7.864,86.229c-0.174,1.926-1.59,3.521-3.523,3.521h-77.3 c-1.934,0-3.352-1.592-3.524-3.521L5.166,33.129C4.994,31.197,6.751,29.605,8.69,29.605L8.69,29.605z M69.077,42.998h9.866v65.314 h-9.866V42.998L69.077,42.998z M30.072,42.998h9.867v65.314h-9.867V42.998L30.072,42.998z M49.572,42.998h9.869v65.314h-9.869 V42.998L49.572,42.998z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.dropdown-btn:hover span{
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+.tasks{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-tasks{
+    width: 95%;
+    margin: auto;
+    background: none;
+    border: 1px solid white;
+    border-style: dashed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    order: 1000;
+}
+
+
+
+.task-block{
+    width: 95%;
+    max-height: 0;
+    overflow: hidden;
+    margin: auto auto 10px auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.task{
+    width: 95%;
+    margin: auto;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.556);
+    border-radius: 5px;
+    padding: 10px;
+    position: relative;
+}
+
+.active-task{
+    background: white;
+}
+
+.vector-success{
+    border: none;
+    background: none;
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    opacity: 0.4;
+    transition: all 0.3s ease-in-out;
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --%3E%3Csvg width='30px' height='30px' viewBox='0 0 1024 1024' class='icon' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23000' d='M512 64a448 448 0 110 896 448 448 0 010-896zm-55.808 536.384l-99.52-99.584a38.4 38.4 0 10-54.336 54.336l126.72 126.72a38.272 38.272 0 0054.336 0l262.4-262.464a38.4 38.4 0 10-54.272-54.336L456.192 600.384z'/%3E%3C/svg%3E");
+}
+
+.vector-success:hover{
+    opacity: 1;
+}
+
+.title-task-block{
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+    padding: 3px;
+}
+
+.part-task-block-first{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.part-task-block-second{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.count-number-task{
+    color: black;
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    padding: 3px;
+}
+
+.create-task{
+    width: 100%;
+    height: 250px;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+#title{
+    border-radius: 4px;
+    font-size: 22px;
+    padding: 10px 0px;
+    box-shadow: none;
+    border: none;
+    color: rgb(85, 85, 85);
+    width: 80%;
+    box-sizing: border-box;
+    font-weight: bold;
+    margin: 20px 20px 0 20px;
+}
+
+#count-tasks{
+    border-radius: 4px;
+    background-color: rgb(239, 239, 239);
+    font-size: 16px;
+    padding: 10px;
+    box-shadow: none;
+    border: none;
+    color: rgb(85, 85, 85);
+    width: 75px;
+    box-sizing: border-box;
+    margin-right: 10px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.add-tasks:hover{
+    background: black;
+    opacity: 0.5;
+}
+
+.header-add-tasks{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.header-add-tasks span{
+    font-weight: bold;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.focuses{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.focuses span{
+    color: rgb(85, 85, 85);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.count{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.footer-task{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 60px;
+    border-radius: 4px;
+    padding: 14px 20px;
+    text-align: right;
+    background-color: rgb(239, 239, 239);
+}
+
+#close-task{
+    border: none;
+    background: none;
+    font-size: 18px;
+    color: black;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+#save{
+    border: none;
+    background: #363636;
+    color: white;
+    padding: 5px 15px;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#up{
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.9;
+    font-size: 14px;
+    padding: 8px 12px;
+    display: inline-block;
+    min-width: 0px;
+    background-color: white;
+    color: rgb(85, 85, 85);
+    border: 1px solid rgb(223, 223, 223);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px;
+    margin: 10px 2px 0px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --%3E%3Csvg width='30px' height='30px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 14L12 10L8 14' stroke='%23200E32' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#down{
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.9;
+    font-size: 14px;
+    display: inline-block;
+    min-width: 0px;
+    background-color: white;
+    color: rgb(85, 85, 85);
+    border: 1px solid rgb(223, 223, 223);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px;
+    margin: 10px 2px 0px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.vector-down{
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotate(180deg);
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --%3E%3Csvg width='30px' height='30px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 14L12 10L8 14' stroke='%23200E32' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+.switch{
+    width: 62px;
+    height: 32px;
+    background: #E5E5E5;
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+    appearance: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    border-radius:16px; 
+    -moz-border-radius:16px; 
+    -webkit-border-radius:16px; 
+}
+
+.switch:before{
+    content: ' ';
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    width: 60px;
+    height: 30px;
+    background: #FFFFFF;
+    z-index: 1;
+    border-radius:16px;
+    -moz-border-radius:16px; 
+    -webkit-border-radius:16px;
+}
+
+.switch:after{
+    content: ' ';
+    height: 29px;
+    width: 29px;
+    border-radius: 28px;
+    z-index: 2;
+    background: #FFFFFF;
+    position: absolute;
+    -webkit-transition-duration: 300ms;
+    transition-duration: 300ms;
+    top: 1px;
+    left: 1px;
+    -webkit-box-shadow: 0 2px 5px #999999;
+    box-shadow: 0 2px 5px #999999;
+}
+
+.switchOn , .switchOn:before{
+    background: #4cd964;
+}
+.switchOn:after{
+    left: 32px;
+}
+
+.checkbox{
+    display: none;
+}
+
+.auto-start-settings{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.auto-start-focus{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    margin: 0px 30px;
+}
+
+.auto-start-break{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    margin: 0px 30px;
+}
+
+.auto-switch{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    margin: 0px 30px;
+}
+
+.break-interval{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    margin: 0px 30px;
+}
+
+.break-interval input{
+    width: 80px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 10px;
+    background-color: white;
+    -webkit-box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
+    -moz-box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
+    box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
+    border-color: white;
+}
